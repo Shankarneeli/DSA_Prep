@@ -36,10 +36,11 @@
 let Bikes = ['Hero','Suzuki','Yamaha','KTM','Bajaj','Pulsar'];
 // console.log(Bikes.toString());
 
-// //2.join()- returns a new String by concatenating all elements with comma & doesn't affect original Array.Both toString() & join()
-//  converts the array into a single string but the key diff is, in join() we can specify our own seperator(can customize).
+// //2.join()- returns a new String by concatenating all elements & doesn't affect original Array.Both toString() & join()
+//  converts the array into a single string but the key diff is,in join() we can specify our own seperator(can customize).
 // console.log(Bikes.join());
 // console.log(Bikes.join(""));
+// console.log(Bikes.join(" & "));
 // console.log(Bikes.join("-"));
 
 
@@ -101,7 +102,7 @@ let numbers = [1,2,3,4,5,6];
 // numbers.splice(2,3,9,"hotDog"); //removes 3 elements from 2nd index & adds 9, hotDog inplace of them.
 // console.log(numbers); //changes original Main Array.
 
-// //11.slice()-accepts parameters,start &   end indexes & returns the Removed elements. 
+// //11.slice()-accepts parameters,start & end indexes & returns the Removed elements. 
 // let sliceResult = numbers.slice(1,3); //doesn't include 3rd index(n-1).
 // console.log(sliceResult);//prints remaining elements.no changes main array,creates new Array.
 // console.log(numbers); //Printing the Original Array for Comparision.
@@ -139,12 +140,23 @@ let letters = ["a","b","c","d","e"];
 // console.log(found); 
 
 
-// //17.
+// //17.-findIndex()- this is like combination of find & indexOf methods.using this we can FIND the INDEX of specific element
+// which satisfies the conditon,if the condition fails then returns -1.This Takes a function
+// const unOrdredNumbers = [12,2,4,8,69,96];
+// const indexFinding = (element)=>element>20;
+// console.log(unOrdredNumbers.findIndex(indexFinding)); //Output - 4. index of 4 = 69,which is greaterThan 20.
 
+
+// //18.includes()- used to find weather any element is present inside or not. returns True or False.
+// console.log(Bikes.includes("KTM",1));
+// console.log(Bikes.includes("BMW",1));
+
+
+// //19.
 // question - Find the 2nd largest number from Arr =[10,2,36,15,26,36,35]; 
 
 function secondLargeArray(arr){
-    // const uniqueArray = new Set(arr);
+    // const uniqueArray = new Set(arr); 
     const uniqueArray = Array.from(new Set(arr)); //set returns only Unique elements & "Array.from" converts any objects into Arrays
     uniqueArray.sort((a,b)=>{
         return b - a ;
