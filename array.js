@@ -96,11 +96,13 @@ unSortedNumbers.sort((a,b)=>(a-b)); // for Ascending order
 unSortedStrings.sort(); //sorts alphabetically for strings.
 // console.log(unSortedStrings);
 
+
 let numbers = [1,2,3,4,5,6];
 // //10.Splice()- ADDS or REMOVES element.syntax = array.splice(index,howManyElements,newElements);
 // (1st parameter)from which index to start removing,(2nd parameter)how many elements to remove,(3rd param)new elements.
 // numbers.splice(2,3,9,"hotDog"); //removes 3 elements from 2nd index & adds 9, hotDog inplace of them.
 // console.log(numbers); //changes original Main Array.
+
 
 // //11.slice()-accepts parameters,start & end indexes & returns the Removed elements. 
 // let sliceResult = numbers.slice(1,3); //doesn't include 3rd index(n-1).
@@ -116,6 +118,7 @@ let letters = ["a","b","c","d","e"];
 // letters.reverse();
 // console.log(numbers); //changes the main Array
 // console.log(letters); //changes the main Array
+
 
 // //13.isArray()- this returns True or False, if the object is array.
 // let arr = "this is an Array";
@@ -152,7 +155,101 @@ let letters = ["a","b","c","d","e"];
 // console.log(Bikes.includes("BMW",1));
 
 
-// //19.
+// //19.entries()- this return a object with key/value pairs & used along with "for of"loop to iterate through each element of array.
+const weekDays = ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
+// let iterator =weekDays.entries();
+// for(let x of iterator){
+//     console.log(x); //Doesn't change the Original Array,
+// }
+
+
+// //20.every()- this methods tests/checks EVERY element in the array satisfies the condition,take a function & returns Boolean values.
+// const condition = unSortedNumbers.every((element)=>element<100); Another way of implementing every() Method.
+// const condition = (element)=>element<100;
+// console.log(unSortedNumbers.every(condition));
+
+
+// //21.some()- used to test whether at least one element in the array passes the test implemented by the provided function.
+// It returns a Boolean value
+
+// const hasEvenNumber = numbers.some(function(number) {
+//     return number % 2 === 0;
+// });
+// console.log(hasEvenNumber);
+
+
+// //22.fill()- this method fills the elements in an array with a Specified value.Syntax- arr.fill("value",startIndex,endIndex);.
+const fruits = ["apple","WaterMelon","Berries","Oranges"];
+// // console.log(fruits.fill("Kiwi",2,3)); 
+// console.log(fruits.fill("Kiwi",2)); //if end index not mentioned,it takes all after start index.
+// // console.log(fruits.fill("Kiwi")); //if start & end indices not mentioned ,changes all elements to specified value.
+
+
+// //23. copyWithIn()- this method copies a sequence of array elements from existing array & paste's within the array to specified position
+// from a start index.
+// console.log( fruits.copyWithin(3,2));
+// console.log( fruits.copyWithin(3,1,3)); //this method OverWrites the Original Array
+
+
+// //24.valueOf()- this method returns the array itself.simply returns same array elements,doesn't take any argumnts also.
+// console.log(weekDays);
+// const ValueOfResults = weekDays.valueOf();
+// console.log(ValueOfResults);
+
+
+// //25.map()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.This method 
+// returns a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";
+// console.log(numbers);
+// const mappedNumbers = numbers.map(function(item){
+//     return item +10; //RegularFunction
+// })
+// const mappedNumbers = numbers.map((item)=>{
+//     return item*2; //ArrowFunction
+// });
+// console.log(mappedNumbers);
+
+
+// //26.forEach()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.without
+// returnig a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";This will be d only 
+// practical difference b/w map() & forEach().
+// console.log(numbers);
+// numbers.forEach(function(element,index,arr){
+//     console.log(`Index: ${index} Element: ${element} Array: ${arr}` );
+// });
+
+
+// //27.filter()- this method will iterate over each element in the array & return the elements which passes the condition.This method 
+// returns a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";
+// console.log(numbers);
+// let filteredNumbers = numbers.filter(function(age){
+//     return age>5;
+// });
+// console.log(filteredNumbers);
+
+
+// //28. reduce()- this method will iterate over each element in the array & return a reduced version of the array after performing given condition/operation.
+// SYNTAX - array.reduce(reducerFunction(accumulator, currentValue, currentIndex, array), initialValue)
+// console.log(numbers);
+// const sum = numbers.reduce(function(acc,curr){
+//     return acc + curr;
+// },0);
+// console.log(sum);
+
+//counting instance 
+console.log(fruits);
+let fruitCount = fruits.reduce((accumulator, currentValue) => {
+    if (accumulator[currentValue]) {
+        accumulator[currentValue]++;
+    } else {
+        accumulator[currentValue] = 1;
+    }
+    return accumulator;
+}, {});
+
+console.log(fruitCount); 
+
+
+
 // question - Find the 2nd largest number from Arr =[10,2,36,15,26,36,35]; 
 
 function secondLargeArray(arr){
