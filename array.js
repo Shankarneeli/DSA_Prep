@@ -6,7 +6,7 @@
 4. push()
 5. shift()
 6. unshift()
-7. delete
+7. delete - operator
 8. concat()
 9. sort()
 10. splice()
@@ -236,17 +236,17 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 // console.log(sum);
 
 //counting instance 
-console.log(fruits);
-let fruitCount = fruits.reduce((accumulator, currentValue) => {
-    if (accumulator[currentValue]) {
-        accumulator[currentValue]++;
-    } else {
-        accumulator[currentValue] = 1;
-    }
-    return accumulator;
-}, {});
+// console.log(fruits);
+// let fruitCount = fruits.reduce((accumulator, currentValue) => {
+//     if (accumulator[currentValue]) {
+//         accumulator[currentValue]++;
+//     } else {
+//         accumulator[currentValue] = 1;
+//     }
+//     return accumulator;
+// }, {});
 
-console.log(fruitCount); 
+// console.log(fruitCount); 
 
 
 
