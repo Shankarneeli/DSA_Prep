@@ -248,7 +248,7 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 
 // console.log(fruitCount); 
 
-
+//hello
 
 // question - Find the 2nd largest number from Arr =[10,2,36,15,26,36,35]; 
 
