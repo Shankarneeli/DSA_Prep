@@ -249,7 +249,6 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 // console.log(fruitCount); 
 
 // question - Find the 2nd largest number from Arr =[10,2,36,15,26,36,35]; 
-
 function secondLargeArray(arr){
     // const uniqueArray = new Set(arr); 
     const uniqueArray = Array.from(new Set(arr)); //set returns only Unique elements & "Array.from" converts any objects into Arrays
@@ -266,7 +265,6 @@ function secondLargeArray(arr){
 //solved using Brute Force Approach/Analysis.
 // console.log(secondLargeArray([10,2,36,15,26,36,35]));
 // console.log(secondLargeArray([10,5,10]));
-
 
 //Optimised way of solving the Above question with Time Complexity\
 
