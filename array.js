@@ -197,7 +197,16 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 // console.log(ValueOfResults);
 
 
-// //25.map()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.This method 
+// //25.forEach()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.without
+// returnig a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";This will be d only 
+// practical difference b/w map() & forEach().
+// console.log(numbers);
+// numbers.forEach(function(element,index,arr){
+//     console.log(`Index: ${index} Element: ${element} Array: ${arr}` );
+// });
+
+
+// //26.map()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.This method 
 // returns a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";
 // console.log(numbers);
 // const mappedNumbers = numbers.map(function(item){
@@ -209,15 +218,6 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 // console.log(mappedNumbers);
 
 
-// //26.forEach()- this method will iterate over each element in the array & also helpful for doing mathematical Operations.without
-// returnig a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";This will be d only 
-// practical difference b/w map() & forEach().
-// console.log(numbers);
-// numbers.forEach(function(element,index,arr){
-//     console.log(`Index: ${index} Element: ${element} Array: ${arr}` );
-// });
-
-
 // //27.filter()- this method will iterate over each element in the array & return the elements which passes the condition.This method 
 // returns a new ARRAY.this method takes a callBack function which allows 3 parameters as "currentValue,index,array";
 // console.log(numbers);
@@ -227,15 +227,16 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 // console.log(filteredNumbers);
 
 
-// //28. reduce()- this method will iterate over each element in the array & return a reduced version of the array after performing given condition/operation.
+//28. reduce()- this method will iterate over each element in the array & return a reduced version of the array after performing given condition/operation.
 // SYNTAX - array.reduce(reducerFunction(accumulator, currentValue, currentIndex, array), initialValue)
+
 // console.log(numbers);
 // const sum = numbers.reduce(function(acc,curr){
 //     return acc + curr;
 // },0);
 // console.log(sum);
 
-//counting instance 
+// counting instance 
 // console.log(fruits);
 // let fruitCount = fruits.reduce((accumulator, currentValue) => {
 //     if (accumulator[currentValue]) {
@@ -248,7 +249,23 @@ const fruits = ["apple","WaterMelon","Berries","Oranges"];
 
 // console.log(fruitCount); 
 
-//hello
+
+// //29.reduceRight()- this method is almost similar to reduce().but the action takesplace from right to left.
+const sub = [175,50,25];
+// const result = sub.reduceRight(function(acc,curr){
+//     return acc-curr;
+// });
+// console.log(`Using reduceRight Method ${result}`);  //o/p= -200. bcz the action starting from right to left.
+// const result1 = sub.reduce(function(acc,curr){
+//     return acc-curr;
+// });
+// console.log(`Using reduce Method ${result1}`); // o/p= 100. bcz the action starting from normal left to right.
+
+
+// //30. from()- this method converts any object into Array.
+
+// console.log(Array.from("Shankar"));
+
 
 // question - Find the 2nd largest number from Arr =[10,2,36,15,26,36,35]; 
 
