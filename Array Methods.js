@@ -1,5 +1,4 @@
 /* ARRAY METHODS
-
 1. toString()
 2. join()
 3. pop()
@@ -30,7 +29,6 @@
 27. reduce()
 28. reduceRight()
 29. from()
-
 */
 // //1.toString() - Combines the Array into single String & returns the new String, seperated with comma & doesn't affect original Array.
 let Bikes = ['Hero','Suzuki','Yamaha','KTM','Bajaj','Pulsar'];
